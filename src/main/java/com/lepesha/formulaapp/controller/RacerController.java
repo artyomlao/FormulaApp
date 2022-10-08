@@ -35,13 +35,13 @@ public class RacerController {
     @PostMapping("/add")
     public ResponseEntity<Racer> addRacer(@RequestBody Racer racer) {
         Racer newRacer = racerService.add(racer);
-        return new ResponseEntity<>(racer, HttpStatus.OK);
+        return new ResponseEntity<>(newRacer, HttpStatus.OK);
     }
 
     @PutMapping("/update")
     public ResponseEntity<Racer> updateRacer(@RequestBody Racer racer) {
         Racer newRacer = racerService.updateRacer(racer);
-        return new ResponseEntity<>(racer, HttpStatus.OK);
+        return new ResponseEntity<>(newRacer, HttpStatus.OK);
     }
 
     @DeleteMapping("/delete/{id}")
